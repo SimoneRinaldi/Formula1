@@ -1,5 +1,5 @@
 async function fetchDriverStandings(year) {
-    const response = await fetch(`http://ergast.com/api/f1/${year}/driverStandings/1.json`);
+    const response = await fetch(`https://ergast.com/api/f1/${year}/driverStandings/1.json`);
     const data = await response.json();
     return data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
 }
