@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-const last_URL = "http://ergast.com/api/f1/current/last.json"
-const next_URL = "http://ergast.com/api/f1/current/next.json"
+const last_URL = "https://ergast.com/api/f1/current/last.json"
+const next_URL = "https://ergast.com/api/f1/current/next.json"
 
 async function lastRace() {
     try {
@@ -211,15 +211,15 @@ async function showResults() {
                 let posGained = result.grid - result.position
 
                 if (posGained < 0) {
-                    posSimbol = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    posSimbol = `<svg xmlns="https://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-chevron-down" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
               </svg> ${-1 * posGained}`
                 } else if (posGained == 0) {
-                    posSimbol = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                    posSimbol = `<svg xmlns="https://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-dash-lg" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/>
               </svg>`
                 } else {
-                    posSimbol = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                    posSimbol = `<svg xmlns="https://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-chevron-up" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
           </svg> ${posGained}`
                 }
@@ -379,7 +379,7 @@ function showSchedule(race) {
 
 
 async function championShow() {
-    const URL = `http://ergast.com/api/f1/current/driverStandings.json`
+    const URL = `https://ergast.com/api/f1/current/driverStandings.json`
 
     try {
         const response = await fetch(URL);
@@ -435,7 +435,7 @@ async function championShow() {
 }
 
 async function constructorShow() {
-    const URL = `http://ergast.com/api/f1/current/constructorStandings.json`
+    const URL = `https://ergast.com/api/f1/current/constructorStandings.json`
 
 
     try {
